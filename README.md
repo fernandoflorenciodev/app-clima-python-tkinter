@@ -56,7 +56,7 @@ pip install pycountry-convert
 ## 1. Clone o repositório
 
 ```bash
-git clone https://github.com/fernandoflorenciodev/app-clima-python-tkinter/tree/main
+git clone https://github.com/fernandoflorenciodev/app-clima-python-tkinter
 ```
 
 ## 2. Abra a pasta do projeto
