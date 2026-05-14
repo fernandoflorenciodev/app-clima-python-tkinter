@@ -1,0 +1,4 @@
+requests
+pillow
+pytz
+pycountry-convert
