@@ -119,6 +119,7 @@ def informação():
     l_pressao['text'] = "Pressao : "+str(pressao)
     l_velocidade['text'] = "Velocidade do vento : "+str(velocidade)+" km/h "
     l_descricao['text'] = descricao
+    l_temperatura['text'] = str(round(tempo)) + "°C"
 
 
     # Troca de Fundo
@@ -132,16 +133,16 @@ def informação():
 
     if regiao_periodo <= 5: 
         imagem = Image.open('imagens.clima/lua2.png')
-        fundo = fundo_noite
+        novo_fundo = fundo_noite
     elif regiao_periodo <= 11:
         imagem = Image.open('imagens.clima/sol2.png')
-        fundo = fundo_dia
+        novo_fundo = fundo_dia
     elif regiao_periodo <= 17:
         imagem = Image.open('imagens.clima/tarde2.png')
-        fundo = fundo_tarde
+        novo_fundo = fundo_tarde
     elif regiao_periodo <= 23:
         imagem = Image.open('imagens.clima/lua2.png')
-        fundo = fundo_noite
+        novo_fundo = fundo_noite
     else:
         pass
     
@@ -150,23 +151,24 @@ def informação():
     imagem = imagem.resize((130, 130))
     imagem = ImageTk.PhotoImage(imagem)
 
-    l_icon = Label(frame_corpo, image=imagem, bg=fundo)
+    l_icon = Label(frame_corpo, image=imagem, bg=novo_fundo)
     l_icon.place(x=175, y=65)
 
     # Passando Informações nas Labels
 
-    janela.configure(bg=fundo)
-    frame_top.configure(bg=fundo)
-    frame_corpo.configure(bg=fundo)
+    janela.configure(bg=novo_fundo)
+    frame_top.configure(bg=novo_fundo)
+    frame_corpo.configure(bg=novo_fundo)
 
-    l_cidade['bg'] = fundo
-    l_data['bg'] = fundo
-    l_umidade['bg'] = fundo
-    l_u_simbol['bg'] = fundo
-    l_u_nome['bg'] = fundo
-    l_pressao['bg'] = fundo
-    l_velocidade['bg'] = fundo
-    l_descricao['bg'] = fundo
+    l_cidade['bg'] = novo_fundo
+    l_data['bg'] = novo_fundo
+    l_umidade['bg'] = novo_fundo
+    l_u_simbol['bg'] = novo_fundo
+    l_u_nome['bg'] = novo_fundo
+    l_pressao['bg'] = novo_fundo
+    l_velocidade['bg'] = novo_fundo
+    l_descricao['bg'] = novo_fundo
+    l_temperatura['bg'] = novo_fundo
 
 
 
@@ -198,10 +200,11 @@ l_pressao.place(x=10, y=184)
 l_velocidade = Label(frame_corpo, text='', anchor='center', bg=fundo, fg=cor1, font=("Arial 10"))
 l_velocidade.place(x=10, y=212)
 
-
-
 l_descricao = Label(frame_corpo, text='', anchor='center', bg=fundo, fg=cor1, font=("Arial 10 bold"))
 l_descricao.place(x=205, y=200)
+
+l_temperatura = Label(frame_corpo, text='', anchor='center', bg=fundo, fg=cor1, font=("Arial 18 bold underline"))
+l_temperatura.place(x=250, y=245)
 
 
 
