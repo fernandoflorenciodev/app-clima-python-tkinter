@@ -83,7 +83,7 @@ O projeto utiliza a API da OpenWeather:
 
 # Imagens do projeto
 
-![Texto alternativo](noite.png)
+![Texto alternativo](dia.png), ![Texto alternativo](tarde.png), ![Texto alternativo](noite.png)
 
 
 
