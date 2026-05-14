@@ -83,9 +83,7 @@ O projeto utiliza a API da OpenWeather:
 
 # Imagens do projeto
 
-/imagens/dia.png
-/imagens/tarde.png
-/imagens/noite.png
+
 
 ---
 
